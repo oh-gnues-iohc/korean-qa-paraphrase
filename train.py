@@ -170,6 +170,8 @@ if __name__ == "__main__":
         args=train_args,
         train_dataset=train_dataset,
         eval_dataset=eval_dataset,
+        compute_metrics=rouge,
+        preprocess_logits_for_metrics=preprocess_logits_for_metrics
     )
 
     trainer.train()
